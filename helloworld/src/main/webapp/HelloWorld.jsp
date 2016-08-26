@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
-<body background="./images/v1.jpg">
+<body background="./images/v2.jpg">
 <pre><font  size="5">稼働環境：<font color="#0000ff"><b><%=System.getProperty("jboss.server.name") %></b></font></font></pre>
-<pre><font size="7">Hello World! --- Ver1.0</font></pre>
+<pre><font size="7">Hello World! --- Ver2.0</font></pre>
 </body>
 </html>
