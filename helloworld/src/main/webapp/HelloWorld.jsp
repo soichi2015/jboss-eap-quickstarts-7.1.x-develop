@@ -14,6 +14,6 @@ String localAddress = in.getHostAddress();
 out.println(localAddress);
 %>
 </b></font></font></pre>
-<pre><font size="7">Hello World! --- Ver1.0</font></pre>
+<pre><font size="7">Hello World! --- Ver2.0</font></pre>
 </body>
 </html>
