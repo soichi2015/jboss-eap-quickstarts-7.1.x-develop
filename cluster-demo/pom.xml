@@ -5,7 +5,7 @@
     <groupId>uk.me.eastmans</groupId>
     <packaging>war</packaging>
     <version>1.0</version>
-    <name>cluster-demo</name>
+    <name>cluster-demo-A</name>
     <artifactId>cluster-demo</artifactId>
 
     <properties>
@@ -43,7 +43,7 @@
          <!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
          <id>openshift</id>
          <build>
-            <finalName>cluster-demo</finalName>
+            <finalName>cluster-demo-A</finalName>
             <plugins>
               <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
