@@ -1,11 +1,14 @@
- <%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
- 
- <html>
- <body>
- <h2>アクセス時刻とユーザー選択情報をセッションに格納 </h2>
- 
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<img src="images/redhat.png" width="50" height="50"/>
+<h2>セッション格納データ</h2>
  <p>
  ServerName: 
  <span style="border-bottom:solid 2px #ff0000;">
@@ -26,16 +29,6 @@
 %>
 </span>
 </p>
- <%
-     System.out.println( "Putting date now" );
- %>
- 
- <%
-	request.setCharacterEncoding("UTF-8");
- 	String weather = request.getParameter("q1");
- 	session.setAttribute("weather", weather); 
- %>
-
 	<table border="1">
 		<tr>
 			<td> 時刻 </td>
@@ -52,9 +45,4 @@
 <p><a href="index.jsp" >トップに戻る</a></p>
 <p><a href="javascript:location.reload();">更新する</a></p>
 </body>
-
 </html>
-
-
-
-
