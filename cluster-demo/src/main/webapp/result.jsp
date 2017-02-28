@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<img src="images/redhat.png" width="50" height="50"/>
+<img src="images/Image4.png" width="50" height="50"/>
 <h2>セッション格納データ</h2>
  <p>
  ServerName: 

@@ -1,10 +1,10 @@
- <%@ page language="java" contentType="text/html; charset=UTF-8"
+Image4 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
  
  <html>
  <body>
-	 <img src="images/redhat.png" width="50" height="50"/>
+	 <img src="images/Image4.png" width="50" height="50"/>
  <h2>アクセス時刻とユーザー選択情報をセッションに格納 </h2>
  
 
