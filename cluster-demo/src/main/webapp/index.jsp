@@ -14,7 +14,7 @@
     session.setAttribute("currentTime", date.toString);
 %>
 
-現在時刻 <%= date %>
+現在時刻 <%= date.toString %>
 
 <form method="post" action="confirm.jsp">
 <p>今日の天気は。。。？</p>
