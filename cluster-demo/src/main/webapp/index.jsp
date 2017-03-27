@@ -11,7 +11,7 @@
 <%
     System.out.println( "Evaluating date now" );
     java.util.Date date = new java.util.Date();
-    session.setAttribute("currentTime", date);
+    session.setAttribute("currentTime", date.toString);
 %>
 
 現在時刻 <%= date %>
