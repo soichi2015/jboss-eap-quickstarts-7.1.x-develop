@@ -11,10 +11,10 @@
 <%
     System.out.println( "Evaluating date now" );
     java.util.Date date = new java.util.Date();
-    session.setAttribute("currentTime", date.toString);
+    session.setAttribute("currentTime", date);
 %>
 
-現在時刻 <%= date.toString %>
+現在時刻 <%= date %>
 
 <form method="post" action="confirm.jsp">
 <p>今日の天気は。。。？</p>
