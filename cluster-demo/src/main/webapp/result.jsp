@@ -8,28 +8,48 @@
 </head>
 <body>
 <img src="images/Image4.png" width="50" height="50"/>
-<h2>セッション格納データ</h2>
- <p>
- ServerName: 
- <span style="border-bottom:solid 2px #ff0000;">
- <%
-	String servername = System.getProperty("jboss.server.name");
-	request.setAttribute("servername", servername);
-	out.println(servername);
- %>
- </span>
- </p>
- <p>
- IP: 
- <span style="border-bottom:solid 2px #ff0000;">
- <%
-	java.net.InetAddress in = java.net.InetAddress.getLocalHost();
-	String localAddress = in.getHostAddress(); 
-	out.println(localAddress);
-%>
-</span>
-</p>
+<h2>各種データ</h2>
+
+<table border="1">
+<tr>サーバ環境情報</tr>
+		<tr>
+			<td> ServerName </td>
+			<td>  
+				<span style="border-bottom:solid 2px #ff0000;">
+			 	<%
+					String servername = System.getProperty("jboss.server.name");
+					out.println(servername);
+			 	%>
+		 		</span>
+ 		 	</td>
+		</tr>
+		<tr>
+			<td>IP</td>
+			<td>
+				<span style="border-bottom:solid 2px #ff0000;">
+				<%
+					java.net.InetAddress in = java.net.InetAddress.getLocalHost();
+					String localAddress = in.getHostAddress(); 
+					out.println(localAddress);
+				%>
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td>JDK Version</td>
+			<td>
+				<span style="border-bottom:solid 2px #ff0000;">
+			 	<%
+			 		String jv = System.getProperty("java.version");
+			 		out.println(jv);
+			 	%>
+				</span>
+			</td>
+		</tr>
+ </table>
+<p> </p>
 	<table border="1">
+	<tr>セッション格納情報</tr>
 		<tr>
 			<td> 時刻 </td>
 			<td> <%=session.getAttribute("currentTime") %> </td>
