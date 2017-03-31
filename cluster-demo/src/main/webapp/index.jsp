@@ -4,7 +4,7 @@
 <html>
 
 <body>
-<img src="images/Image4.png" width="50" height="50">
+<img src="images/redhat.png" width="50" height="50">
 
 <h2>こんにちは！</h2>
 
