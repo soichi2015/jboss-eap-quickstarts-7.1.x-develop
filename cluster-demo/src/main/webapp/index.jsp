@@ -12,7 +12,7 @@
     System.out.println( "Evaluating date now" );
     java.util.Date date = new java.util.Date();
     session.setAttribute("currentTime", date);
-    String s = System.getProperty("COLOR"); // env var COLOR takes precedence
+    String s = System.getProperty("color"); // env var COLOR takes precedence
     System.out.println("----COLOR :" + s);
 %>
 
