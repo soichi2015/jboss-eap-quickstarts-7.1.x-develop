@@ -4,7 +4,7 @@
  
  <html>
  <body>
-	 <img src="images/redhat.png" width="50" height="50"/>
+	 <img src="images/<%=System.getenv("COLOR")%>.png" width="50" height="50"/>
  <h2>アクセス時刻とユーザー選択情報をセッションに格納 </h2>
  
 
