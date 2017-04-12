@@ -4,7 +4,8 @@
 <html>
 
 <body>
-<img src="images/redhat.png" width="50" height="50">
+
+<img src="images/<%=System.getenv("COLOR")%>" width="50" height="50">
 
 <h2>こんにちは！</h2>
 
