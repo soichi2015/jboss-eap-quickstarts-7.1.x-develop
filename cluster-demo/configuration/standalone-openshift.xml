@@ -32,7 +32,7 @@
         <extension module="org.wildfly.extension.request-controller"/>
         <extension module="org.wildfly.extension.security.manager"/>
         <extension module="org.wildfly.extension.undertow"/>
-        <!-- ##KEYCLOAK_EXTENSION## -->
+
     </extensions>
     <management>
         <security-realms>
@@ -53,7 +53,7 @@
                 <authorization>
                     <properties path="application-roles.properties" relative-to="jboss.server.config.dir"/>
                 </authorization>
-                <!-- ##SSL## -->
+
             </security-realm>
         </security-realms>
         <audit-log>
@@ -128,12 +128,12 @@
             </formatter>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:batch-jberet:1.0">
-            <!-- ##DEFAULT_JOB_REPOSITORY## -->
+
             <default-thread-pool name="batch"/>
             <job-repository name="in-memory">
                 <in-memory/>
             </job-repository>
-            <!-- ##JOB_REPOSITORY## -->
+
             <thread-pool name="batch">
                 <max-threads count="10"/>
                 <keepalive-time time="30" unit="seconds"/>
@@ -142,7 +142,7 @@
         <subsystem xmlns="urn:jboss:domain:bean-validation:1.0"/>
         <subsystem xmlns="urn:jboss:domain:datasources:4.0">
             <datasources>
-                <!-- ##DATASOURCES## -->
+
                 <drivers>
                     <driver name="h2" module="com.h2database.h2">
                         <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
@@ -176,8 +176,6 @@
                 </managed-scheduled-executor-services>
             </concurrent>
             <default-bindings context-service="java:jboss/ee/concurrency/context/default"
-            ##DEFAULT_DATASOURCE##
-            ##DEFAULT_JMS##
             managed-executor-service="java:jboss/ee/concurrency/executor/default"
             managed-scheduled-executor-service="java:jboss/ee/concurrency/scheduler/default"
             managed-thread-factory="java:jboss/ee/concurrency/factory/default"/>
@@ -196,7 +194,6 @@
             </mdb>
             <pools>
                 <bean-instance-pools>
-                    <!-- Automatically configure pools. Alternatively, max-pool-size can be set to a specific value -->
                     <strict-max-pool name="slsb-strict-max-pool" derive-size="from-worker-pools" instance-acquisition-timeout="5" instance-acquisition-timeout-unit="MINUTES"/>
                     <strict-max-pool name="mdb-strict-max-pool" derive-size="from-cpu-count" instance-acquisition-timeout="5" instance-acquisition-timeout-unit="MINUTES"/>
                 </bean-instance-pools>
@@ -210,7 +207,7 @@
             </passivation-stores>
             <async thread-pool-name="default"/>
             <remote connector-ref="http-remoting-connector" thread-pool-name="default"/>
-            <!-- ##TIMER_SERVICE## -->
+
             <thread-pools>
                 <thread-pool name="default">
                     <max-threads count="10"/>
@@ -308,8 +305,8 @@
                     <protocol type="pbcast.NAKACK2"/>
                     <protocol type="UNICAST3"/>
                     <protocol type="pbcast.STABLE"/>
-                    <!-- ##JGROUPS_AUTH## -->
-                    <!-- ##JGROUPS_ENCRYPT## -->
+
+
                     <protocol type="pbcast.GMS"/>
                     <protocol type="UFC"/>
                     <protocol type="MFC"/>
@@ -326,8 +323,8 @@
                     <protocol type="pbcast.NAKACK2"/>
                     <protocol type="UNICAST3"/>
                     <protocol type="pbcast.STABLE"/>
-                    <!-- ##JGROUPS_AUTH## -->
-                    <!-- ##JGROUPS_ENCRYPT## -->
+
+
                     <protocol type="pbcast.GMS"/>
                     <protocol type="MFC"/>
                     <protocol type="FRAG2"/>
@@ -343,15 +340,15 @@
             <jpa default-datasource="" default-extended-persistence-inheritance="DEEP"/>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:jsf:1.0"/>
-        <!-- ##KEYCLOAK_SUBSYSTEM## -->
-        <!-- ##KEYCLOAK_SAML_SUBSYSTEM## -->
+
+
         <subsystem xmlns="urn:jboss:domain:mail:2.0">
             <mail-session name="default" jndi-name="java:jboss/mail/Default">
                 <smtp-server outbound-socket-binding-ref="mail-smtp"/>
             </mail-session>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:messaging-activemq:1.0">
-            <!-- ##MESSAGING_SUBSYSTEM_CONFIG## -->
+
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:modcluster:2.0">
             <mod-cluster-config advertise-socket="modcluster" connector="ajp">
@@ -370,7 +367,7 @@
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:resource-adapters:4.0">
             <resource-adapters>
-                <!-- ##RESOURCE_ADAPTERS## -->
+
             </resource-adapters>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:request-controller:1.0"/>
@@ -404,8 +401,8 @@
                         <policy-module code="Delegating" flag="required"/>
                     </authorization>
                 </security-domain>
-                <!-- ##KEYCLOAK_SECURITY_DOMAIN## -->
-                <!-- ##ADDITIONAL_SECURITY_DOMAINS## -->
+
+
             </security-domains>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:singleton:1.0">
@@ -422,14 +419,14 @@
                 </process-id>
             </core-environment>
             <recovery-environment socket-binding="txn-recovery-environment" status-socket-binding="txn-status-manager"/>
-            <!-- ##JDBC_STORE## -->
+
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:undertow:3.0">
             <buffer-cache name="default"/>
             <server name="default-server">
                 <ajp-listener name="ajp" socket-binding="ajp"/>
                 <http-listener name="default" socket-binding="http" redirect-socket="https"/>
-                <!-- ##HTTPS_CONNECTOR## -->
+
                 <host name="default-host" alias="localhost">
                     <location name="/" handler="welcome-content"/>
                     <filter-ref name="server-header"/>
@@ -484,7 +481,7 @@
         <socket-binding name="jgroups-udp" interface="private" port="55200" multicast-address="${jboss.default.multicast.address:230.0.0.4}" multicast-port="45688"/>
         <socket-binding name="jgroups-udp-fd" interface="private" port="54200"/>
         <socket-binding name="modcluster" port="0" multicast-address="224.0.1.105" multicast-port="23364"/>
-        <!-- ##MESSAGING_PORTS## -->
+
         <socket-binding name="txn-recovery-environment" port="4712"/>
         <socket-binding name="txn-status-manager" port="4713"/>
         <outbound-socket-binding name="mail-smtp">
