@@ -103,10 +103,9 @@
             <logger category="sun.rmi">
                 <level name="WARN"/>
             </logger>
-          </logger>
-                <logger category="org.openshift.ping">
-          <level name="DEBUG"/>
-          </logger>
+            <logger category="org.openshift.ping">
+          	<level name="DEBUG"/>
+            </logger>
             <root-logger>
                 <level name="INFO"/>
                 <handlers>
