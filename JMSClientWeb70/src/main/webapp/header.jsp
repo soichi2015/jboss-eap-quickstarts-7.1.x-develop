@@ -1,8 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page import="java.util.*" language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
      // ヘッダ情報の変数名一覧を取得する
-     java.util.Enumeration enum = request.getHeaderNames();
+     Enumeration enum = request.getHeaderNames();
      
      // ヘッダ情報一覧表用のHTMLを格納する文字列
      String rows = "";
