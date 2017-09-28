@@ -7,11 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
- <%
+<%
  	String hostName = request.getHeader("Host");
  	int index = hostName.indexOf(":");
  	String ip = hostName.substring(0,index);
- %>
+%>
 
 <form  method="POST" action="/JMSClientWeb70/sample/Sender">
        <p>+++++++++++++++メッセージ送信+++++++++++++++</p>
