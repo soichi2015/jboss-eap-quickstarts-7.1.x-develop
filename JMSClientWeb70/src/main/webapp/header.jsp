@@ -1,4 +1,4 @@
-<%@ page　language="java" contentType="text/html;　charset=UTF-8" import="java.util.*" %>
+<%@ page contentType="text/html;　charset=UTF-8" import="java.util.*" %>
 
 <%
      // ヘッダ情報の変数名一覧を取得する
