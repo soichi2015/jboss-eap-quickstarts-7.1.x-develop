@@ -1,20 +1,21 @@
-<%@ page import="java.util.*" language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="java.util.List" %>
+
 <%
      // ヘッダ情報の変数名一覧を取得する
      Enumeration enum = request.getHeaderNames();
-     
+
      // ヘッダ情報一覧表用のHTMLを格納する文字列
      String rows = "";
-     
+
      // 各ヘッダ情報についての処理
      while(enum.hasMoreElements()) {
        // ヘッダ情報の変数名を取得
        String name = (String)enum.nextElement();
-     
+
        // ヘッダ情報の値を取得
        String value = request.getHeader(name);
-     
+
        // 一覧表用のHTMLを作成する
        rows += "<tr><td>" + name + "</td><td>" +
          value +"</td></tr>";
@@ -35,4 +36,3 @@
 </p>
 </body>
 </html>
-
