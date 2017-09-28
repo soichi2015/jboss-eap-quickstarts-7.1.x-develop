@@ -2,15 +2,15 @@
 
 <%
      // ヘッダ情報の変数名一覧を取得する
-     Enumeration enum = request.getHeaderNames();
+     Enumeration objEnm=request.getParameterNames();
 
      // ヘッダ情報一覧表用のHTMLを格納する文字列
      String rows = "";
 
      // 各ヘッダ情報についての処理
-     while(enum.hasMoreElements()) {
+     while(objEnm.hasMoreElements()) {
        // ヘッダ情報の変数名を取得
-       String name = (String)enum.nextElement();
+       String name = (String)objEnm.nextElement();
 
        // ヘッダ情報の値を取得
        String value = request.getHeader(name);
