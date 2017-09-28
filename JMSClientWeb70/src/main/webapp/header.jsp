@@ -1,4 +1,5 @@
-<%@ page contentType="text/html; charset=euc-jp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%
      // ヘッダ情報の変数名一覧を取得する
      java.util.Enumeration enum = request.getHeaderNames();
@@ -19,19 +20,19 @@
          value +"</td></tr>";
      }
 %>
-     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-     <html>
-     <head>
-     <title>ヘッダ情報の取得</title>
-     </head>
-     <body>
-     <h1>ヘッダ情報の取得</h1>
-     <p>
-     <table border=1>
-     <tr><td>変数名</td><td>値</td></tr>
-     <%= rows %>
-     </table>
-     </p>
-     </body>
-     </html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>ヘッダ情報の取得</title>
+</head>
+<body>
+<h1>ヘッダ情報の取得</h1>
+<p>
+<table border=1>
+<tr><td>変数名</td><td>値</td></tr>
+<%= rows %>
+</table>
+</p>
+</body>
+</html>
 
