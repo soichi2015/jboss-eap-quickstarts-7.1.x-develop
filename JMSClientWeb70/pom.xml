@@ -120,6 +120,10 @@
             <artifactId>jboss-servlet-api_3.1_spec</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+          <groupId>org.jboss.spec.javax.servlet.jsp</groupId>
+          <artifactId>jboss-jsp-api_2.3_spec</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
