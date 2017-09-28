@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" import="java.util.*" %>
+<%@ page　language="java" contentType="text/html;　charset=UTF-8" import="java.util.*" %>
 
 <%
      // ヘッダ情報の変数名一覧を取得する
@@ -23,10 +23,10 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>ヘッダ情報の取得</title>
+<title></title>
 </head>
 <body>
-<h1>ヘッダ情報の取得</h1>
+<h1></h1>
 <p>
 <table border=1>
 <tr><td>変数名</td><td>値</td></tr>
