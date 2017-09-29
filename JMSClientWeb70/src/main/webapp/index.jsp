@@ -1,49 +1,32 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="java.util.*"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
+
 <body>
+
+<img src="images/<%=System.getenv("COLOR")%>.png" width="50" height="50">
+
+<h2>こんにちは！</h2>
+
 <%
-	request.setCharacterEncoding("UTF-8");
-	java.net.InetAddress in = java.net.InetAddress.getLocalHost();
-	String hostName = in.getHostAddress(); 
-	out.println(localAddress);
- 	
-	//String hostName = request.getHeader("Host");
- 	//int index = hostName.indexOf(":");
- 	//String ip = hostName.substring(0,index);
+    System.out.println( "Evaluating date now" );
+    java.util.Date date = new java.util.Date();
+    session.setAttribute("currentTime", date);
+    String s = System.getenv("COLOR"); // env var COLOR takes precedence
+    System.out.println("----COLOR :" + s);
 %>
 
-<form  method="POST" action="/JMSClientWeb70/sample/Sender">
-       <p>+++++++++++++++メッセージ送信+++++++++++++++</p>
-		<p>メッセージ：<input type="text" name="msg" size="15"></p>
-		<p>送信数：<input type="text" name="count" size="6"></p>
-		
-		<p>
-			ProviderURL：
-			<select name="protcol">
-			<option>http-remoting://</option>
-			<option>remote://</option>
-			</select>
-			<input type="text" name="port" size="17" value="<%=ip%>:8080">
-		</p>
-		<p><input type="submit" value="メッセージ送信" /></p>
+現在時刻 <%= date %>
+
+<form method="post" action="confirm.jsp">
+<p>今日の天気は。。。？</p>
+<input type="radio" name="q1" value="晴れ"> 晴れ
+<input type="radio" name="q1" value="雨"> 雨
+<input type="radio" name="q1" value="雪"> 雪
+<input type="radio" name="q1" value="曇り"> 曇り
+<p><input type="submit" value="送信する"></p>
 </form>
-<form method="POST" action="/JMSClientWeb70/sample/Consumer">
-	<p>+++++++++++++++メッセージ受信+++++++++++++++</p>
-	<p>
-			ProviderURL：
-			<select name="protcol">
-			<option>http-remoting://</option>
-			<option>remote://</option>
-			</select>
-			<input type="text" name="port" size="17" value="<%=ip%>:8080">		
-	</p>
-	<p><input type="submit" value="メッセージ受信" /></p>
-</form>
+
 </body>
 </html>
