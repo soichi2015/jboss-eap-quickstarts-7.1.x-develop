@@ -8,9 +8,14 @@
 </head>
 <body>
 <%
- 	String hostName = request.getHeader("Host");
- 	int index = hostName.indexOf(":");
- 	String ip = hostName.substring(0,index);
+	request.setCharacterEncoding("UTF-8");
+	java.net.InetAddress in = java.net.InetAddress.getLocalHost();
+	String hostName = in.getHostAddress(); 
+	out.println(localAddress);
+ 	
+	//String hostName = request.getHeader("Host");
+ 	//int index = hostName.indexOf(":");
+ 	//String ip = hostName.substring(0,index);
 %>
 
 <form  method="POST" action="/JMSClientWeb70/sample/Sender">
