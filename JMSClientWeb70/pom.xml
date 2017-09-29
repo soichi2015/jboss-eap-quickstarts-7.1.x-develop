@@ -295,7 +295,7 @@
       <artifactId>artemis-journal</artifactId>
       <version>1.1.0.SP21-redhat-1</version>
     </dependency>
-  </dependencies>
+  </dependencies>    
 
   <build>
     <finalName>${project.artifactId}</finalName>
@@ -312,9 +312,14 @@
         <artifactId>maven-war-plugin</artifactId>
         <version>3.0.0</version>
         <configuration>
-          <warSourceDirectory>WebContent</warSourceDirectory>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
         </configuration>
       </plugin>
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>1.0.2.Final</version>
+            </plugin>
     </plugins>
   </build>
 </project>
