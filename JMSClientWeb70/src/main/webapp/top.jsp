@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
@@ -18,7 +18,7 @@
                 <option>http-remoting://</option>
                 <option>remote://</option>
               </select>
-              <input type="text" name="port" size="17" value="<%=ip%>:8080"></p>
+              <input type="text" name="port" size="17" value="localhost:8080"></p>
               <p><input type="submit" value="メッセージ送信"/></p>
             </form>
             <form method="POST" action="/JMSClientWeb70/sample/Consumer">
@@ -29,7 +29,7 @@
                   <option>http-remoting://</option>
                   <option>remote://</option>
                 </select>
-                <input type="text" name="port" size="17" value="<%=ip%>:8080"></p>
+                <input type="text" name="port" size="17" value="localhost:8080"></p>
                 <p><input type="submit" value="メッセージ受信"/></p>
               </form>
             </body>
