@@ -43,6 +43,21 @@
     <artifactId>jboss-remote-naming</artifactId>
     <version>2.0.5.Final-redhat-1</version>
 </dependency>
+<dependency>
+  <groupId>org.codehaus.cargo</groupId>
+  <artifactId>cargo-core-container-wildfly</artifactId>
+  <version>1.4.14</version>
+</dependency>
+<dependency>
+  <groupId>org.codehaus.cargo</groupId>
+  <artifactId>cargo-core-container-jboss</artifactId>
+  <version>1.4.14</version>
+</dependency>
+<dependency>
+  <groupId>org.wildfly</groupId>
+  <artifactId>wildfly-controller-client</artifactId>
+  <version>8.2.0.Final</version>
+</dependency>
     </dependencies>
 
   <build>
