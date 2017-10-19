@@ -409,9 +409,6 @@
             <wsdl-host>${jboss.bind.address:127.0.0.1}</wsdl-host>
             <endpoint-config name="Standard-Endpoint-Config"/>
             <endpoint-config name="Recording-Endpoint-Config">
-                <pre-handler-chain name="recording-handlers" protocol-bindings="##SOAP11_HTTP ##SOAP11_HTTP_MTOM ##SOAP12_HTTP ##SOAP12_HTTP_MTOM">
-                    <handler name="RecordingHandler" class="org.jboss.ws.common.invocation.RecordingServerHandler"/>
-                </pre-handler-chain>
             </endpoint-config>
             <client-config name="Standard-Client-Config"/>
         </subsystem>
