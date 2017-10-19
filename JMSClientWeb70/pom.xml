@@ -58,6 +58,11 @@
   <artifactId>wildfly-controller-client</artifactId>
   <version>8.2.0.Final</version>
 </dependency>
+<dependency>
+<groupId>jboss</groupId>
+<artifactId>jboss-client</artifactId>
+<version>4.0.2</version>
+</dependency>
     </dependencies>
 
   <build>
