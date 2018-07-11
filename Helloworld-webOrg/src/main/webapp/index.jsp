@@ -15,5 +15,15 @@ out.println(localAddress);
 %>
 <b><pre><font size="5"></font></pre></b>
 <pre><font size="7">Hello World! --- Ver<%=System.getenv("Version")%>.0</font></pre>
+
+<pre>
+    <h1>HTMLファイルからPOSTでJSONデータを送信する</h1>
+    <p>URL: <input type="text" id="url_post" name="url" size="100" value="http://testurl/"></p>
+    <p>value1: <input type="text" id="value1" size="30" value="値1"></p>
+    <p>value2: <input type="text" id="value2" size="30" value="値2"></p>
+    <p><button id="button" type="button">submit</button></p>
+    <textarea id="response" cols=120 rows=10 disabled></textarea>
+</pre>
+
 </body>
 </html>
