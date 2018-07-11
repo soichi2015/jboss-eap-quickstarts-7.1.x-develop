@@ -57,6 +57,7 @@ java.net.InetAddress in = java.net.InetAddress.getLocalHost();
 String localAddress = in.getHostAddress();
 out.println(localAddress);
 %>
+</b></font></font></pre>
 
 <pre><font size="7">Hello World! --- Ver<%=System.getenv("Version")%>.0</font></pre>
 
