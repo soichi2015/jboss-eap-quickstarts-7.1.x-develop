@@ -13,7 +13,6 @@ java.net.InetAddress in = java.net.InetAddress.getLocalHost();
 String localAddress = in.getHostAddress(); 
 out.println(localAddress);
 %>
-</b></font>OPENSHIFTで本番稼働中</font></pre>
 <b><pre><font size="5"></font></pre></b>
 <pre><font size="7">Hello World! --- Ver<%=System.getenv("Version")%>.0</font></pre>
 </body>
