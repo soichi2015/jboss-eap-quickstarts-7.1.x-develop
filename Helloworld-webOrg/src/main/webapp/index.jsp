@@ -17,7 +17,7 @@
 
                 var JSONdata = {
                     value1: $("#value1").val(),
-                    value2: $("#value2").val()      
+                    value2: $("#value2").val()
                 };
 
             alert(JSON.stringify(JSONdata));
@@ -54,19 +54,19 @@
 <pre><font size="5">稼働環境：<font color="#0000ff"><b><%=System.getProperty("jboss.server.name") %>(OPENSHIFTで本番稼働中)</b></font></font></pre>
 <pre><font size="5">IP Address:<font color="#0000ff"><b><%
 java.net.InetAddress in = java.net.InetAddress.getLocalHost();
-String localAddress = in.getHostAddress(); 
+String localAddress = in.getHostAddress();
 out.println(localAddress);
 %>
 <b><pre><font size="5"></font></pre></b>
 <pre><font size="7">Hello World! --- Ver<%=System.getenv("Version")%>.0</font></pre>
 
-<pre>
-    <p>URL: <input type="text" id="url_post" name="url" size="100" value="http://testurl/"></p>
-    <p>value1: <input type="text" id="value1" size="30" value="値1"></p>
-    <p>value2: <input type="text" id="value2" size="30" value="値2"></p>
-    <p><button id="button" type="button">submit</button></p>
+<pre><font size="3">
+    <pre>URL: <input type="text" id="url_post" name="url" size="100" value="http://testurl/"></pre>
+    <pre>value1: <input type="text" id="value1" size="30" value="値1"></pre>
+    <pre>value2: <input type="text" id="value2" size="30" value="値2"></pre>
+    <pre><button id="button" type="button">submit</button></pre>
     <textarea id="response" cols=120 rows=10 disabled></textarea>
-</pre>
+</font></pre>
 
 </body>
 </html>
