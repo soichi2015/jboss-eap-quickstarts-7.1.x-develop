@@ -5,48 +5,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Hello!Openshift.</title>
-
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-
-<script type="text/javascript">
-    $(function(){
-        $("#response").html("Response Values");
-
-        $("#button").click( function(){
-            var url = $("#url_post").val();
-
-                var JSONdata = {
-                    value1: $("#value1").val(),
-                    value2: $("#value2").val()
-                };
-
-            alert(JSON.stringify(JSONdata));
-
-            $.ajax({
-                type : 'post',
-                url : url,
-                data : JSON.stringify(JSONdata),
-                contentType: 'application/JSON',
-                dataType : 'JSON',
-                scriptCharset: 'utf-8',
-                success : function(data) {
-
-                    // Success
-                    alert("success");
-                    alert(JSON.stringify(data));
-                    $("#response").html(JSON.stringify(data));
-                },
-                error : function(data) {
-
-                    // Error
-                    alert("error");
-                    alert(JSON.stringify(data));
-                    $("#response").html(JSON.stringify(data));
-                }
-            });
-        })
-    })
-</script>
 </head>
 
 <body background="./images/v<%=System.getenv("Version")%>.jpg">
@@ -60,13 +18,6 @@ out.println(localAddress);
 </b></font></font></pre>
 
 <pre><font size="7">Hello World! --- Ver<%=System.getenv("Version")%>.0</font></pre>
-
-<pre><font size="3">
-URL: <input type="text" id="url_post" name="url" size="100" value="https://172.16.116.134/api/v2/job_templates/91/">
-value1: <input type="text" id="value1" size="30" value="値1">
-value2: <input type="text" id="value2" size="30" value="値2">
-<button id="button" type="button">submit</button>
-</font></pre>
 
 </body>
 </html>
