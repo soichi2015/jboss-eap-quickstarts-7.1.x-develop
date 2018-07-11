@@ -57,15 +57,14 @@ java.net.InetAddress in = java.net.InetAddress.getLocalHost();
 String localAddress = in.getHostAddress();
 out.println(localAddress);
 %>
-<b><pre><font size="5"></font></pre></b>
+
 <pre><font size="7">Hello World! --- Ver<%=System.getenv("Version")%>.0</font></pre>
 
 <pre><font size="3">
-    <pre>URL: <input type="text" id="url_post" name="url" size="100" value="http://testurl/"></pre>
-    <pre>value1: <input type="text" id="value1" size="30" value="値1"></pre>
-    <pre>value2: <input type="text" id="value2" size="30" value="値2"></pre>
-    <pre><button id="button" type="button">submit</button></pre>
-    <textarea id="response" cols=120 rows=10 disabled></textarea>
+URL: <input type="text" id="url_post" name="url" size="100" value="https://172.16.116.134/api/v2/job_templates/91/">
+value1: <input type="text" id="value1" size="30" value="値1">
+value2: <input type="text" id="value2" size="30" value="値2">
+<button id="button" type="button">submit</button>
 </font></pre>
 
 </body>
