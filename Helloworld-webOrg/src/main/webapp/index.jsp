@@ -18,10 +18,6 @@ out.println(localAddress);
 </b></font></font></pre>
 
 <pre><font size="7">Hello World! --- Ver<%=System.getenv("Version")%>.0</font></pre>
-<pre><font size="7">Hello World! --- Ver<%=System.getenv("KUBERNETES_SERVICE_PORT")%>.0</font></pre>
-<pre><font size="7">Hello World! --- Ver<%=System.getenv("KUBERNETES_SERVICE_HOST")%>.0</font></pre>
-<pre><font size="7">Hello World! --- Ver<%=System.getenv("helloworld_SERVICE_PORT")%>.0</font></pre>
-<pre><font size="7">Hello World! --- Ver<%=System.getenv("helloworld-org_SERVICE_HOST")%>.0</font></pre>
 
 </body>
 </html>
