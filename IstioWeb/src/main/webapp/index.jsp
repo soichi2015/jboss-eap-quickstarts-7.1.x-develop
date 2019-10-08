@@ -20,5 +20,7 @@ out.println(localAddress);
 <pre><font size="5">ドメイン：<font color="#0000ff"><b>
 <%=System.getenv("SERVICES_DOMAIN") %></b></font></font></pre>
 
+<a href="http://helloworld.apps.cluster-tokyo-2d4a.tokyo-2d4a.open.redhat.com:8080/Helloworld-web/">hello</a>
+<a href="http://helloworld:8080/Helloworld-web/">hello</a>
 </body>
 </html>
