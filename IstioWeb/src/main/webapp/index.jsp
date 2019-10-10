@@ -1,3 +1,5 @@
+<%@page import="java.net.NetworkInterface"%>
+<%@page import="java.util.Enumeration"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <html>
@@ -20,7 +22,22 @@ out.println(localAddress);
 <pre><font size="5">ドメイン：<font color="#0000ff"><b>
 <%=System.getenv("SERVICES_DOMAIN") %></b></font></font></pre>
 
-<a href="http://helloworld.apps.cluster-tokyo-2d4a.tokyo-2d4a.open.redhat.com:8080/Helloworld-web/">hello</a>
-<a href="http://helloworld:8080/Helloworld-web/">hello</a>
+<%
+    Enumeration<NetworkInterface> nics = 
+        NetworkInterface.getNetworkInterfaces();
+    while(nics.hasMoreElements()){
+        NetworkInterface nic = nics.nextElement();
+        String s = "";
+        byte[] hardwareAddress = nic.getHardwareAddress();
+        if(hardwareAddress != null){
+            for(byte b : hardwareAddress){
+                s += String.format("%02X ", b);
+            }
+        }
+        out.println(nic.getName());
+        //("%s:%s - %s%n", nic.getName(), nic.getDisplayName(), s);
+    }
+%>
+
 </body>
 </html>
