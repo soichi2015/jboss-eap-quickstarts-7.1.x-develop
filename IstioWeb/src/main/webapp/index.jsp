@@ -35,6 +35,8 @@ out.println(localAddress);
             }
         }
         out.println(nic.getName());
+        out.println(nic.getDisplayName());
+        out.println(s);
         //("%s:%s - %s%n", nic.getName(), nic.getDisplayName(), s);
     }
 %>
